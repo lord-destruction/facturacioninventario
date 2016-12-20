@@ -25,7 +25,7 @@ public class conexion {
          
          Class.forName("com.mysql.jdbc.Driver");
          
-         con = DriverManager.getConnection(url,"root","mysql");
+         con = DriverManager.getConnection(url,"root","prueba_netbenas");
          if (con!=null){
             System.out.println("Conexión a base de datos facturacion. listo");
          }
