@@ -17,9 +17,9 @@ public class Interfaz_actualizarExistencias extends javax.swing.JInternalFrame {
      */
     public Interfaz_actualizarExistencias() {
         initComponents();
-        cantidad_actual.setEnabled(false);
-        desc_articulo.setEnabled(false);
-        txtstock.setEnabled(false);
+        cantidad_actual.setEditable(false);
+        desc_articulo.setEditable(false);
+        txtstock.setEditable(false);
         Object[] idarticulo = ctrl.combox("articulo","id_articulo");
         combo_articulo.removeAllItems();
         for(int i=0;i<idarticulo.length;i++)
