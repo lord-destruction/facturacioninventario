@@ -51,6 +51,8 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
         telefonoclientjTextField1 = new javax.swing.JTextField();
         txt_des_tipodoc = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        txt_des_ciudad = new javax.swing.JTextField();
 
         setIconifiable(true);
         setMaximizable(true);
@@ -134,6 +136,8 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
 
         jLabel8.setText("Descricpion");
 
+        jLabel9.setText("Descripcion");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,9 +166,15 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                                     .addComponent(dirclientejTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txt_des_ciudad))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addGap(122, 122, 122)
+                                        .addComponent(jLabel9))
                                     .addComponent(jLabel3)
                                     .addComponent(apellclientejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
@@ -206,11 +216,13 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(jLabel5))
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(dirclientejTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_des_ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -333,38 +345,23 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
     private void combo_tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_tipoActionPerformed
         if(combo_tipo.getSelectedItem()!=null )
      {
-            
-       
         txt_des_tipodoc.setEnabled(false);
-        String aux=combo_tipo.getSelectedItem().toString();
+        int aux=combo_tipo.getSelectedIndex();
         
-            
-        if(aux.equals("1")){
-            txt_des_tipodoc.setText("CC");
-          
-        }else if(aux.equals("2")){
-            txt_des_tipodoc.setText("TI");
-           
-        }else if(aux.equals("3")){
-            txt_des_tipodoc.setText("RC");
-          
-        }else if(aux.equals("4")){
-            txt_des_tipodoc.setText("NIT");
-           
-        }else if(aux.equals("5")){
-            txt_des_tipodoc.setText("PASAPORTE");
+        Object[] tipo_doc = ctrl.combox("tipo_de_documento","Descripcion");
        
-        }else if(aux.equals("6")){
-            txt_des_tipodoc.setText("CE");
-           
-        }else{
-            txt_des_tipodoc.setText("RUT");
-           
-        }
-        
-    
-        }     
-
+        Object arr[]=new Object[tipo_doc.length];
+         for (int i = 0; i < tipo_doc.length; i++) {
+           arr[i]=tipo_doc[i];
+         }
+         for (int i = 0; i < arr.length; i++) {
+            if(aux==i){
+                txt_des_tipodoc.setText(arr[i].toString());
+                i=arr.length;
+            }
+             
+         }
+     }
     }//GEN-LAST:event_combo_tipoActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -382,11 +379,13 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField nomclientejTextField2;
     private javax.swing.JButton nuevojButton1;
     private javax.swing.JButton regclientejButton1;
     private javax.swing.JButton salirclijButton3;
     private javax.swing.JTextField telefonoclientjTextField1;
+    private javax.swing.JTextField txt_des_ciudad;
     private javax.swing.JTextField txt_des_tipodoc;
     // End of variables declaration//GEN-END:variables
 
