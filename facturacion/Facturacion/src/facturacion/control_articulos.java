@@ -29,11 +29,11 @@ public class control_articulos {
      * @param Date
      */
     
-    public boolean ingresar_articulo(String id, String descripcion, int precioventa, int preciocosto, int stock, String tipoart, String codprov, String fechaingreso)
+    public boolean ingresar_articulo(String id, String descripcion, int precioventa, int preciocosto, String stock,int cantidad, String tipoart, String codprov, String fechaingreso)
     {               
         
-            String datos[] = {id,descripcion,Integer.toString(precioventa),Integer.toString(preciocosto),Integer.toString(stock),tipoart,codprov,fechaingreso};           
-            return sensql.insertar(datos, "insert into articulo(id_articulo, descripcion, precio_venta,precio_costo, stock, cod_tipo_articulo, cod_proveedor, fecha_ingreso) values(?,?,?,?,?,?,?,?)");
+            String datos[] = {id,descripcion,Integer.toString(precioventa),Integer.toString(preciocosto),stock,Integer.toString(cantidad),tipoart,codprov,fechaingreso};           
+            return sensql.insertar(datos, "insert into articulo(id_articulo, descripcion, precio_venta,precio_costo, stock, cantidad, cod_tipo_articulo, cod_proveedor, fecha_ingreso) values(?,?,?,?,?,?,?,?,?)");
                                   
         
     }
