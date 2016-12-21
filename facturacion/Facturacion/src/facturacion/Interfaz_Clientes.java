@@ -114,6 +114,11 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
         jLabel4.setText("Tipo de documento");
 
         ciudad_combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ciudad_combo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ciudad_comboActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Ciudad");
 
@@ -134,9 +139,13 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Telefono");
 
+        txt_des_tipodoc.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+
         jLabel8.setText("Descricpion");
 
         jLabel9.setText("Descripcion");
+
+        txt_des_ciudad.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -345,7 +354,7 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
     private void combo_tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_tipoActionPerformed
         if(combo_tipo.getSelectedItem()!=null )
      {
-        txt_des_tipodoc.setEnabled(false);
+        txt_des_tipodoc.setEditable(false);
         int aux=combo_tipo.getSelectedIndex();
         
         Object[] tipo_doc = ctrl.combox("tipo_de_documento","Descripcion");
@@ -363,6 +372,28 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
          }
      }
     }//GEN-LAST:event_combo_tipoActionPerformed
+
+    private void ciudad_comboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ciudad_comboActionPerformed
+        if(ciudad_combo.getSelectedItem()!=null )
+     {
+        txt_des_ciudad.setEditable(false);
+        int aux=ciudad_combo.getSelectedIndex();
+        
+        Object[] ciudad = ctrl.combox("ciudad","Nombre_ciudad");
+       
+        Object arr[]=new Object[ciudad.length];
+         for (int i = 0; i < ciudad.length; i++) {
+           arr[i]=ciudad[i];
+         }
+         for (int i = 0; i < arr.length; i++) {
+            if(aux==i){
+                txt_des_ciudad.setText(arr[i].toString());
+                i=arr.length;
+            }
+             
+         }
+     }
+    }//GEN-LAST:event_ciudad_comboActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellclientejTextField3;

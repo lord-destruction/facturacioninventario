@@ -231,6 +231,9 @@
           </StringArray>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ciudad_comboActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
@@ -263,6 +266,11 @@
     <Component class="javax.swing.JTextField" name="telefonoclientjTextField1">
     </Component>
     <Component class="javax.swing.JTextField" name="txt_des_tipodoc">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="14" style="1"/>
+        </Property>
+      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
@@ -275,6 +283,11 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_des_ciudad">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Trebuchet MS" size="14" style="1"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
