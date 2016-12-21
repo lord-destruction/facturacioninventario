@@ -11,14 +11,14 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
         limpiar();
         bloquear_cajas();
         
-        Object[] tipo_doc = ctrl.combox("tipo_de_documento","Descripcion");
+        Object[] tipo_doc = ctrl.combox("tipo_de_documento","id_tipo_documento");
         combo_tipo.removeAllItems();
         for(int i=0;i<tipo_doc.length;i++){
         combo_tipo.addItem(tipo_doc[i]);
         
     }
         
-        Object[] ciu = ctrl.combox("ciudad","Nombre_ciudad");
+        Object[] ciu = ctrl.combox("ciudad","Codigo_ciudad");
         ciudad_combo.removeAllItems();
         for(int i=0;i<ciu.length;i++){
         ciudad_combo.addItem(ciu[i]);
@@ -49,6 +49,8 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
         nuevojButton1 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         telefonoclientjTextField1 = new javax.swing.JTextField();
+        txt_des_tipodoc = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setIconifiable(true);
         setMaximizable(true);
@@ -130,6 +132,8 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Telefono");
 
+        jLabel8.setText("Descricpion");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -146,7 +150,6 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                         .addComponent(salirclijButton3))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
                             .addComponent(telefonoclientjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,17 +159,26 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                                             .addComponent(nomclientejTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel2)
                                             .addComponent(jLabel6)))
-                                    .addComponent(docclientejTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(dirclientejTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel7))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(ciudad_combo, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(combo_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel5)
                                     .addComponent(jLabel3)
-                                    .addComponent(apellclientejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(apellclientejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(docclientejTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(92, 92, 92)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(combo_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(22, 22, 22)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(txt_des_tipodoc, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 47, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -176,11 +188,13 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(docclientejTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(combo_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(combo_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_des_tipodoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -201,7 +215,7 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(telefonoclientjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelclijButton2)
                     .addComponent(salirclijButton3)
@@ -317,7 +331,39 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_dirclientejTextField4ActionPerformed
 
     private void combo_tipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_tipoActionPerformed
+        if(combo_tipo.getSelectedItem()!=null )
+     {
+            
+       
+        txt_des_tipodoc.setEnabled(false);
+        String aux=combo_tipo.getSelectedItem().toString();
         
+            
+        if(aux.equals("1")){
+            txt_des_tipodoc.setText("CC");
+          
+        }else if(aux.equals("2")){
+            txt_des_tipodoc.setText("TI");
+           
+        }else if(aux.equals("3")){
+            txt_des_tipodoc.setText("RC");
+          
+        }else if(aux.equals("4")){
+            txt_des_tipodoc.setText("NIT");
+           
+        }else if(aux.equals("5")){
+            txt_des_tipodoc.setText("PASAPORTE");
+       
+        }else if(aux.equals("6")){
+            txt_des_tipodoc.setText("CE");
+           
+        }else{
+            txt_des_tipodoc.setText("RUT");
+           
+        }
+        
+    
+        }     
 
     }//GEN-LAST:event_combo_tipoActionPerformed
 
@@ -335,11 +381,13 @@ public final class Interfaz_Clientes extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField nomclientejTextField2;
     private javax.swing.JButton nuevojButton1;
     private javax.swing.JButton regclientejButton1;
     private javax.swing.JButton salirclijButton3;
     private javax.swing.JTextField telefonoclientjTextField1;
+    private javax.swing.JTextField txt_des_tipodoc;
     // End of variables declaration//GEN-END:variables
 
 }

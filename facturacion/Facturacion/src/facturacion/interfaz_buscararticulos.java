@@ -24,7 +24,7 @@ public final class interfaz_buscararticulos extends javax.swing.JInternalFrame {
     public void mostrar_tabla(){
         control_articulos ctr;       
         ctr = new control_articulos();
-        String[] columnas = {"Codigo_articulo","Descripcion","Precio_venta","Precio_costo","stock","Tipo_de_articulo","Proveedor", "Fecha_ingreso"};
+        String[] columnas = {"Codigo_articulo","Descripcion","Precio_venta","Precio_costo","stock","cantidad","Tipo_de_articulo","Proveedor", "Fecha_ingreso"};
         datostabla = ctr.consulta_articulos();
         DefaultTableModel datos = new DefaultTableModel(datostabla,columnas);
         jTable1.setModel(datos);

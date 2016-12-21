@@ -42,5 +42,5 @@ private Sentencias_sql sql;
     }
      
     
-    
+       
 }

@@ -269,7 +269,7 @@ control_existencias ctrl = new control_existencias();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-    Interfaz_actualizarstock stock = new Interfaz_actualizarstock();
+    Interfaz_actualizarExistencias stock = new Interfaz_actualizarExistencias();
     jDesktopPane1.add(stock);
     stock.show();
     }//GEN-LAST:event_jMenuItem6ActionPerformed

@@ -35,16 +35,16 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        num_facturajTextField1 = new javax.swing.JTextField();
+        num_factura = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         aceptar = new javax.swing.JButton();
-        cantidadjTextField4 = new javax.swing.JTextField();
+        cantidad = new javax.swing.JTextField();
         motivojTextField3 = new javax.swing.JTextField();
         fechajTextField2 = new javax.swing.JTextField();
-        cod_artjTextField1 = new javax.swing.JTextField();
+        cod_art = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -56,9 +56,9 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Numero de factura");
 
-        num_facturajTextField1.addActionListener(new java.awt.event.ActionListener() {
+        num_factura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num_facturajTextField1ActionPerformed(evt);
+                num_facturaActionPerformed(evt);
             }
         });
 
@@ -107,11 +107,11 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cantidadjTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(22, 22, 22)
-                        .addComponent(cod_artjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cod_art, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(65, 65, 65)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
@@ -129,7 +129,7 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cod_artjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cod_art, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
                     .addComponent(motivojTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
@@ -137,7 +137,7 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cantidadjTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
                             .addComponent(fechajTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4))
@@ -169,7 +169,7 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(28, 28, 28)
-                                .addComponent(num_facturajTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(num_factura, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton1))
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -190,7 +190,7 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(num_facturajTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(num_factura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -210,15 +210,15 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void num_facturajTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_facturajTextField1ActionPerformed
+    private void num_facturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num_facturaActionPerformed
   
         
-    }//GEN-LAST:event_num_facturajTextField1ActionPerformed
+    }//GEN-LAST:event_num_facturaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
      
         String[] columnas = {"Numero_factura","Codigo articulo","Descripcion","Cantidad"};
-        datostabla = exis.datos_detallefactura(num_facturajTextField1.getText());
+        datostabla = exis.datos_detallefactura(num_factura.getText());
         DefaultTableModel datosta = new DefaultTableModel(datostabla,columnas);
         jTable2.setModel(datosta);
             
@@ -236,17 +236,17 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
   
-   if(!cod_artjTextField1.getText().equals("") && !fechajTextField2.getText().equals("") && !cod_artjTextField1.getText().equals("") && !cantidadjTextField4.getText().equals(""))
+   if(!cod_art.getText().equals("") && !fechajTextField2.getText().equals("") && !cod_art.getText().equals("") && !cantidad.getText().equals(""))
     {
-        if(exis.devolucion(num_facturajTextField1.getText(), cod_artjTextField1.getText(), motivojTextField3.getText(), fechajTextField2.getText(), cantidadjTextField4.getText()))
+        if(exis.devolucion(num_factura.getText(), cod_art.getText(), motivojTextField3.getText(), fechajTextField2.getText(), cantidad.getText()))
     
         {
             JOptionPane.showMessageDialog(this, "La devolucion se realizo con exito");
-            exis.update_stock(cantidadjTextField4.getText(), cod_artjTextField1.getText());
+            exis.update_stock(cantidad.getText(), cod_art.getText());
             JOptionPane.showMessageDialog(this, "se actualizo el stock del articulo");
-                cod_artjTextField1.setText("");
+                cod_art.setText("");
                 motivojTextField3.setText("");                
-                cantidadjTextField4.setText("");
+                cantidad.setText("");
                 fechajTextField2.setText("");
         }
         else
@@ -266,8 +266,8 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton aceptar;
-    private javax.swing.JTextField cantidadjTextField4;
-    private javax.swing.JTextField cod_artjTextField1;
+    private javax.swing.JTextField cantidad;
+    private javax.swing.JTextField cod_art;
     private javax.swing.JTextField fechajTextField2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -280,7 +280,7 @@ public class Interfaz_devoluciones extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable2;
     private javax.swing.JTextField motivojTextField3;
-    private javax.swing.JTextField num_facturajTextField1;
+    private javax.swing.JTextField num_factura;
     private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
 }

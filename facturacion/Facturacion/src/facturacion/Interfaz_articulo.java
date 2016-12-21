@@ -300,7 +300,7 @@ public void limpiar()
        registrar.setEnabled(false);
        cancelar.setEnabled(false);
        this.calendario.getCalendarButton().setEnabled(false);
-       
+       combostock.setEnabled(false);
        
     }
     public void  desbloquear()
@@ -315,6 +315,7 @@ public void limpiar()
        nuevoreg.setEnabled(false);
        registrar.setEnabled(true);
        cancelar.setEnabled(true);
+       combostock.setEnabled(true);
        this.calendario.getCalendarButton().setEnabled(true);
        
     }

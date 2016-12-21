@@ -107,10 +107,10 @@ public class control_existencias
       
       }
       
-      public boolean update_stock(String stock, String id_articulo)
+      public boolean update_stock(String cantidad, String id_articulo)
       {
-          String campos[] = {stock,id_articulo};           
-          return sen.insertar(campos, "update articulo set stock=stock+? where id_articulo=?;");
+          String campos[] = {cantidad,id_articulo};           
+          return sen.insertar(campos, "update articulo set cantidad=cantidad+? where id_articulo=?;");
       
       }
      
@@ -122,8 +122,8 @@ public class control_existencias
      
      public Object[][] datos_articulo(String id_articulo)
      {
-        String[] columnas={"descripcion","precio_venta","stock"};
-        Object[][] resultado = sen.GetTabla(columnas, "articulo", "select descripcion, precio_venta, stock from articulo where id_articulo='"+id_articulo+"';");
+        String[] columnas={"descripcion","precio_venta","cantidad","stock"};
+        Object[][] resultado = sen.GetTabla(columnas, "articulo", "select descripcion, precio_venta, cantidad, stock from articulo where id_articulo='"+id_articulo+"';");
         return resultado;
       }
      
@@ -162,7 +162,7 @@ public class control_existencias
         String[] datos = {Nnm_factura,id_articulo, cantidad,total};
         
         String[] datosP = {cantidad, id_articulo};
-        if(sen.insertar(datosP, "update articulo set stock=stock-? where id_articulo=?;"))
+        if(sen.insertar(datosP, "update articulo set cantidad=cantidad-? where id_articulo=?;"))
         {
             return sen.insertar(datos, "insert into detalle_factura(cod_factura,cod_articulo,cantidad,total) values(?,?,?,?);");
         }
